@@ -14,12 +14,8 @@ else
 fi
 
 pushd "$TRAVIS_MSBUILD"
-if [ -f 'msbuild/MSBuild.exe' ]; then
-	echo 'MSBuild already existing.'
-else
 	echo 'Unzipping MSBuild.'
 	unzip -q msbuild.zip
 	echo 'Done!'
-fi
 popd
 
