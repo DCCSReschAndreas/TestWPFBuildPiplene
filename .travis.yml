@@ -1,8 +1,7 @@
 sudo: required
 language: csharp
 mono: none
-dotnet: 3.1.0
 install:
-  - dotnet restore MyTestWPFApp.sln
+  - msbuild MyTestWPFApp.sln -t:Restore
 script:
   - msbuild ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms="x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
