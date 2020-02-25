@@ -22,4 +22,4 @@ before_install:
   - msbuild-prepare
   # libicu52 and libunwind8 are pre-installed.
 script:
-  - dotnet build ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms="x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
+  - msbuild ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms="x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
