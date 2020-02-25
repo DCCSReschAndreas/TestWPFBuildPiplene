@@ -28,5 +28,12 @@ else
 	unzip -q desktopbridge.zip
 	echo 'Done!'
 fi
+if [ -f 'windowsSDKs/v10.0' ]; then
+	echo 'windowsSDKs already existing.'
+else
+	echo 'Unzipping windowsSDKs.'
+	unzip -q windowsSDKs.zip
+	echo 'Done!'
+fi
 popd
 
