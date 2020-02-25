@@ -21,5 +21,12 @@ else
 	unzip -q msbuild.zip
 	echo 'Done!'
 fi
+if [ -f 'desktopbridge/Microsoft.DesktopBridge.props' ]; then
+	echo 'DesktopBridge already existing.'
+else
+	echo 'Unzipping DesktopBridge.'
+	unzip -q desktopbridge.zip
+	echo 'Done!'
+fi
 popd
 
