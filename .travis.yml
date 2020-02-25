@@ -1,6 +1,6 @@
 language: csharp
 mono: none
 install:
-  - dotnet restore
+  - dotnet restore .\MyTestPackage.sln
 script:
   - msbuild ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms="x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
