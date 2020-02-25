@@ -1,7 +1,8 @@
-sudo: required
+os: windows
 language: csharp
 mono: none
-install:
-  - msbuild MyTestWPFApp.sln -t:Restore
+env:
+  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
 script:
-  - msbuild ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms="x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
+  - export PATH=$MSBUILD_PATH:$PATH
+  - msbuild.exe ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms="x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
