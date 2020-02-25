@@ -1,4 +1,5 @@
 language: csharp
-script:
+install:
   - dotnet restore
-  - msbuild ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms=x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
+script:
+  - msbuild ".\MyTestPackage\MyTestPackage.wapproj" /p:configuration=Release /p:AppyBundlePlatforms="x86" /p:AppxBundlePlatforms="x86" /p:AppxBundle=Always
